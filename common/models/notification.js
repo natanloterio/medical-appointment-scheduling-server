@@ -12,30 +12,30 @@ module.exports = function(Notification) {
    */
   Notification.on('attached', function() {
     console.log('Launching Notification service...');
-    Notification.find({
-      where: {
-        or: [
-          {
-            done: null
-          },
-          {
-            done: false
-          }
-        ]
-      }
-    }, function(err, notifications) {
-      if (err) {
-        console.log(err);
-        console.log('Error launching Notification service.');
-      } else {
-        for (var i = notifications.length - 1; i >= 0; i--) {
-          Notification.scheduleNotification(notifications[i]);
-        }
-        if (notifications.length <= 0) {
-          console.log('No notifications pending.');
-        }
-      }
-    });
+    // Notification.find({
+    //   where: {
+    //     or: [
+    //       {
+    //         done: null
+    //       },
+    //       {
+    //         done: false
+    //       }
+    //     ]
+    //   }
+    // }, function(err, notifications) {
+    //   if (err) {
+    //     console.log(err);
+    //     console.log('Error launching Notification service.');
+    //   } else {
+    //     for (var i = notifications.length - 1; i >= 0; i--) {
+    //       Notification.scheduleNotification(notifications[i]);
+    //     }
+    //     if (notifications.length <= 0) {
+    //       console.log('No notifications pending.');
+    //     }
+    //   }
+    // });
     console.log('Launched Notification service.');
   });
 

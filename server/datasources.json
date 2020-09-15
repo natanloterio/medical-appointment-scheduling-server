@@ -2,10 +2,10 @@
   "postgresql": {
     "host": "localhost",
     "port": 5432,
-    "database": "mas-dev",
-    "password": "mas",
+    "database": "natan",
+    "password": "",
     "name": "postgresql",
-    "user": "mas-dev",
+    "user": "natan",
     "debug": true,
     "connector": "postgresql"
   },
